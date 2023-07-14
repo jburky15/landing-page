@@ -6,9 +6,8 @@ const todayDate = document.getElementById('today'),
     searchBtn = document.getElementById('searchBtn');
 
 // Time and Date functions    
-
 // Pull in the date and time
-function showTime() {
+showTime = () => {
     let today = new Date(),
         hour = today.getHours(),
         min = today.getMinutes(),
@@ -31,12 +30,12 @@ function showTime() {
     setTimeout(showTime, 1000);
 };
 
-function addZero(n) {
+addZero = (n) => {
     return (parseInt(n, 10) < 10 ? '0' : '') + n;
 };
 
 // Set the background and greeting based on the time of day
-function setBgGreet() {
+setBgGreet = () => {
     let today = new Date(),
         hour = today.getHours();
 
@@ -56,9 +55,8 @@ function setBgGreet() {
 };
 
 // User name and goal functions
-
 // Get Name
-function getName() {
+getName = () => {
     if(localStorage.getItem('name') === null){
         userName.textContent = '[Enter Name]';
     } else {
@@ -67,7 +65,7 @@ function getName() {
 };
 
 // Set Name
-function setName(e) {
+setName = (e) => {
     if(e.type === 'keypress') {
         if(e.keyCode === 13) {
             localStorage.setItem('name', e.target.innerText);
@@ -79,7 +77,7 @@ function setName(e) {
 };
 
 // Get Goal
-function getGoal() {
+getGoal = () => {
     if(localStorage.getItem('goal') === null) {
         goal.textContent = '[Set a Goal]';
     } else {
@@ -88,7 +86,7 @@ function getGoal() {
 };
 
 // Set Goal
-function setGoal(e) {
+setGoal = (e) => {
     if(e.type === 'keypress') {
         if(e.keyCode === 13) {
             localStorage.setItem('goal', e.target.innerText);
@@ -111,9 +109,8 @@ getName();
 getGoal();
 
 // Search bar functions
-
 // Get the user input from the search field and go to google with it
-function search() {
+search = () => {
     let text = document.getElementById('searchBar').value;
     let query = text.replace(" ", "+", text);
     let url = 'http://www.google.com/search?q=' + query;
@@ -122,7 +119,7 @@ function search() {
 }
 
 // Clear out the search
-function clearInput(){ 
+clearInput = () => { 
     document.getElementById('searchBar').value = ""; 
 }
 
@@ -130,7 +127,7 @@ function clearInput(){
 window.onkeyup = keyPress;
 
 
-function keyPress(e) {
+keyPress = (e) => {
     if(e.keyCode === 13){
         search();
         clearInput();
