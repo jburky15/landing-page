@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap');
+
+:root {
+    --text-color: rgb(255, 255, 255);
+    --secondary-color: rgb(255, 145, 0);
+    --accent-color: rgb(111, 111, 111);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;  
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    color: var(--text-color);
+    background-size: cover;
+}
+
+.topBar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -1vh;
+}
+
+.searchBar {
+    width: 250px;
+    background-color: transparent;
+    color: white;
+    font-size: 1.5rem;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid #fff;
+}
+
+.topBar button {
+    margin-right: 70vw;
+    background-color: transparent;
+    color: white;
+    border: none;
+    font-size: 1.5rem;
+}
+
+.topBar button:hover {
+    cursor: pointer;
+}
+
+input:focus {
+    outline: none;
+}
+
+.weatherwidget {
+    max-width: 170px;
+    align-self: flex-end;
+}
+
+.content {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 10vh;
+}
+
+.today {
+    font-size: 3rem;
+    color: var(--secondary-color);
+}
+
+#time {
+    font-size: 8rem;
+}
+
+#name:focus {
+    border: none;
+}
+
+h1 {
+    margin-bottom: 3rem;
+}
+
+h2 {
+    margin-bottom: 0.5rem;
+    opacity: 0.8;
+}
+
+#goal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 33vw;
+    width: 33%;
+}
+
+#goal:focus {
+    border: none;
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5vh;
+    margin-left: 25vw;
+    padding-top: 2rem;
+    width: 50%;
+    border-top: 2px solid var(--accent-color);
+}
+
+.footer h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.25rem;
+}
+
+.links {
+    font-size: 2rem;
+    margin-top: 4rem;
+    align-self: center;
+}
+
+.links i {
+    margin-left: 2rem;
+}
+
+.links a {
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+@media(max-width: 1200px) {
+    .topBar button {
+        margin-right: 35vw;
+    }
+}
+
+@media(max-width: 700px) {
+    #time{
+        font-size: 6rem;
+    }
+    .topBar button {
+        margin-right: 25vw;
+    }
+}
