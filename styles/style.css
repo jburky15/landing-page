@@ -19,6 +19,7 @@ body {
     height: 100vh;
     color: var(--text-color);
     background-size: cover;
+    overflow: hidden;
 }
 
 .topBar {
@@ -32,6 +33,7 @@ body {
     width: 250px;
     background-color: transparent;
     color: var(--text-color);
+    margin-left: 5vw;
     font-size: 1.5rem;
     border-top: none;
     border-left: none;
