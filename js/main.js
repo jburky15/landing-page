@@ -47,6 +47,7 @@ setBgGreet = () => {
     } else if(hour < 18) {
         //Afternoon
         document.body.style.backgroundImage = "url(../images/afternoon.jpg)";
+        document.body.style.color = 'white';
         greeting.textContent = 'Good afternoon,';
     } else {
         //Evening
