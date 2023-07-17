@@ -6,13 +6,14 @@ const todayDate = document.getElementById('today'),
     searchBtn = document.getElementById('searchBtn');
 
 // Time and Date functions    
+
 // Pull in the date and time
 showTime = () => {
     let today = new Date(),
         hour = today.getHours(),
         min = today.getMinutes(),
         sec = today.getSeconds();
-    
+
     let fullDate = new Date().toDateString();
 
 
@@ -46,7 +47,6 @@ setBgGreet = () => {
     } else if(hour < 18) {
         //Afternoon
         document.body.style.backgroundImage = "url(../images/afternoon.jpg)";
-        document.body.style.color = 'white';
         greeting.textContent = 'Good afternoon,';
     } else {
         //Evening
@@ -56,6 +56,7 @@ setBgGreet = () => {
 };
 
 // User name and goal functions
+
 // Get Name
 getName = () => {
     if(localStorage.getItem('name') === null){
@@ -67,7 +68,7 @@ getName = () => {
 
 // Set Name
 setName = (e) => {
-    if(e.type === 'keypress') {
+    if(e.type === 'keydown') {
         if(e.keyCode === 13) {
             localStorage.setItem('name', e.target.innerText);
             userName.blur();
@@ -88,7 +89,7 @@ getGoal = () => {
 
 // Set Goal
 setGoal = (e) => {
-    if(e.type === 'keypress') {
+    if(e.type === 'keydown') {
         if(e.keyCode === 13) {
             localStorage.setItem('goal', e.target.innerText);
             goal.blur();
@@ -99,10 +100,10 @@ setGoal = (e) => {
 };
 
 // Allow the user to set values by pressing Enter or clicking off the editable selection
-userName.addEventListener('keypress', setName);
 userName.addEventListener('blur', setName);
-goal.addEventListener('keypress', setGoal);
+userName.addEventListener('keydown', setName);
 goal.addEventListener('blur', setGoal);
+goal.addEventListener('keydown', setGoal);
 
 showTime();
 setBgGreet();
@@ -110,6 +111,7 @@ getName();
 getGoal();
 
 // Search bar functions
+
 // Get the user input from the search field and go to google with it
 search = () => {
     let text = document.getElementById('searchBar').value;
@@ -122,17 +124,6 @@ search = () => {
 // Clear out the search
 clearInput = () => { 
     document.getElementById('searchBar').value = ""; 
-}
-
-// Allow the user to press Enter to search
-window.onkeyup = keyPress;
-
-
-keyPress = (e) => {
-    if(e.keyCode === 13){
-        search();
-        clearInput();
-    }
 }
 
 // Allow the user to Click to search
