@@ -42,7 +42,7 @@ body {
 }
 
 .topBar button {
-    margin-right: 70vw;
+    margin-right: 60vw;
     background-color: transparent;
     color: var(--text-color);
     border: none;
@@ -60,6 +60,7 @@ input:focus {
 .weatherwidget {
     max-width: 170px;
     align-self: flex-end;
+    margin-right: 2rem;
 }
 
 .content {
