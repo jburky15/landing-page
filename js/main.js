@@ -127,12 +127,18 @@ clearInput = () => {
     document.getElementById('searchBar').value = ""; 
 }
 
-// Allow the user to Click to search
-searchBtn.addEventListener('click', function clickSearch(){
-    let text = document.getElementById('searchBar').value;
-    let query = text.replace(" ", "+", text);
-    let url = 'http://www.google.com/search?q=' + query;
+// Allow the user to press Enter to search
+searchBar.onkeydown = keyPress;
 
-    window.open(url, '_blank');
+function keyPress(e) {
+    if(e.keyCode === 13){
+        search();
+        clearInput();
+    }
+}
+
+// Allow the user to Click to search
+searchBtn.addEventListener('click', clickSearch = () => {
+    search();
     clearInput();
 });
