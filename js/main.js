@@ -1,12 +1,11 @@
-const todayDate = document.getElementById('today'), 
+const todayDate = document.getElementById('today'),
     time = document.getElementById('time'),
     greeting = document.getElementById('greeting'),
     userName = document.getElementById('name'),
     goal = document.getElementById('goal'),
     searchBtn = document.getElementById('searchBtn');
 
-// Time and Date functions    
-
+// Time and Date functions
 // Pull in the date and time
 showTime = () => {
     let today = new Date(),
@@ -57,7 +56,6 @@ setBgGreet = () => {
 };
 
 // User name and goal functions
-
 // Get Name
 getName = () => {
     if(localStorage.getItem('name') === null){
@@ -112,7 +110,6 @@ getName();
 getGoal();
 
 // Search bar functions
-
 // Get the user input from the search field and go to google with it
 search = () => {
     let text = document.getElementById('searchBar').value;
@@ -128,14 +125,12 @@ clearInput = () => {
 }
 
 // Allow the user to press Enter to search
-searchBar.onkeydown = keyPress;
-
-function keyPress(e) {
+searchBar.onkeydown = keyPress = (e) => {
     if(e.keyCode === 13){
         search();
         clearInput();
     }
-}
+};
 
 // Allow the user to Click to search
 searchBtn.addEventListener('click', clickSearch = () => {
