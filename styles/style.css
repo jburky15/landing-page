@@ -143,6 +143,9 @@ h2 {
 }
 
 @media(max-width: 768px) {
+    body {
+        overflow: hidden;
+    }
 
     .today {
         font-size: 1.5rem;
@@ -174,12 +177,12 @@ h2 {
     .footer {
         display: none;
     }
-    
 }
 
 @media (max-width: 320px) {
     body {
         max-height: 100vh;
+        overflow: hidden;
     }
 
     .footer {
