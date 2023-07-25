@@ -1,0 +1,33 @@
+.weatherwidget {
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: .5rem;
+    padding: .5rem;
+}
+  
+.weather-icon {
+    width: 40px;
+    height: 40px;
+    margin-top: -2rem;
+    object-fit: contain;
+}
+  
+.weather-icon.large {
+    width: 80px;
+    height: 80px;
+}
+  
+.weatherwidget h1 {
+    font-size: 1rem;
+    color: white;
+}
+
+.header-current-temp {
+    font-size: 2rem;
+    margin-left: .5rem;
+    color: white;
+}

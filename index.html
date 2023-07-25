@@ -4,7 +4,8 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="icon" href="./images/favicon.ico">
-        <link rel="stylesheet" href="./styles/style.css">
+        <link rel="stylesheet" href="/styles/style.css">
+        <link rel="stylesheet" href="/styles/weather.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,10 +15,12 @@
     <body>
         <div class="topBar">
             <input type="text" placeholder="Search" id="searchBar" class="searchBar"><button id="searchBtn"><i class="fa fa-search"></i></button>
-            <script async src="https://app1.weatherwidget.org/js/?id=ww_90d8bd174c171"></script>
-            <div class="weatherwidget" id="ww_90d8bd174c171" v='1.3' loc='auto' a='{"t":"responsive","lang":"en","sl_lpl":1,"ids":[],"font":"Arial","sl_ics":"one","sl_sot":"fahrenheit","cl_bkg":"#FFFFFF00","cl_font":"#FFF","cl_cloud":"#d4d4d4","cl_persp":"#2196F3","cl_sun":"#FFC107","cl_moon":"#FFC107","cl_thund":"#FF5722","el_wfc":3,"cl_odd":"#00000000"}'>
-                More forecasts:
-                <a href="https://oneweather.org/johannesburg/14_days/" id="ww_90d8bd174c171_u" target="_blank">Weather forecast Johannesburg 14 days</a>
+            <div class="weatherwidget">
+                <h1>Current Conditions</h1>
+                <img class="weather-icon large" src="./images/icons/sun.svg" data-current-icon />
+                <div class="header-current-temp">
+                  <span data-current-temp>31</span>&deg;
+                </div>
             </div>
         </div>
 
@@ -45,6 +48,7 @@
         </div>
 
         <script src="https://kit.fontawesome.com/aeb1efd05f.js" crossorigin="anonymous"></script>
-        <script defer src="./js/main.js"></script>
+        <script type="module" src="/js/weather.js"></script>
+        <script defer src="/js/main.js"></script>
     </body>
 </html>
