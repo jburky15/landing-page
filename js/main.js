@@ -41,16 +41,16 @@ setBgGreet = () => {
 
     if(hour < 12) {
         //Morning
-        document.body.style.backgroundImage = "url(../images/morning.webp)";
+        document.body.style.backgroundImage = "url(./images/morning.webp)";
         greeting.textContent = 'Good Morning, ';
     } else if(hour < 18) {
         //Afternoon
-        document.body.style.backgroundImage = "url(../images/afternoon.webp)";
+        document.body.style.backgroundImage = "url(./images/afternoon.webp)";
         document.body.style.color = 'white';
         greeting.textContent = 'Good afternoon,';
     } else {
         //Evening
-        document.body.style.backgroundImage = "url(../images/evening.webp)";
+        document.body.style.backgroundImage = "url(./images/evening.webp)";
         greeting.textContent = 'Good evening,';
     }
 };
