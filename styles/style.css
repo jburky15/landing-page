@@ -25,8 +25,9 @@ body {
     flex-direction: column;
     height: 100vh;
     color: var(--text-color);
-    background: no-repeat center center fixed;
-    background-size:auto;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     font-family: 'Montserrat', sans-serif;
 }
 
