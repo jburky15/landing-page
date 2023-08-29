@@ -42,6 +42,7 @@ setBgGreet = () => {
     if(hour < 12) {
         //Morning
         document.body.style.backgroundImage = "url(./images/morning.webp)";
+        document.body.style.color = "rgb(80, 80, 80)";
         greeting.textContent = 'Good Morning, ';
     } else if(hour < 18) {
         //Afternoon
