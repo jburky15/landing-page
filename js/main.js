@@ -3,7 +3,8 @@ const todayDate = document.getElementById('today'),
     greeting = document.getElementById('greeting'),
     userName = document.getElementById('name'),
     goal = document.getElementById('goal'),
-    searchBtn = document.getElementById('searchBtn');
+    searchBtn = document.getElementById('searchBtn'),
+    searchInput = document.getElementById('searchBar');
 
 // Time and Date functions
 // Pull in the date and time
@@ -43,6 +44,9 @@ setBgGreet = () => {
         //Morning
         document.body.style.backgroundImage = "url(./images/morning.webp)";
         greeting.textContent = 'Good Morning, ';
+        document.body.style.color = 'rgb(0, 183, 255)'
+        searchInput.style.color = 'black';
+
     } else if(hour < 18) {
         //Afternoon
         document.body.style.backgroundImage = "url(./images/afternoon.webp)";
